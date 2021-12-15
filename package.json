@@ -1,0 +1,12 @@
+{
+  "name": "p6oc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./css/main.scss:./css/style2.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
