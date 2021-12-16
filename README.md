@@ -27,6 +27,7 @@ There are four carousels, one for the best films and three for different types o
 ### Modal content
 
 A modal window opens if you click on one of the movie covers or on the play button of the featured movie. This window contains different information:
+
 * The image of the cover of the film
 * The title of the movie
 * The complete genre of the movie
@@ -39,4 +40,5 @@ A modal window opens if you click on one of the movie covers or on the play butt
 * The country of origin
 * Box Office result
 * The summary of the film
+
 To close this window click on the close button or outside the window.
