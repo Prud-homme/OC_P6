@@ -1,11 +1,8 @@
-
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
-
-
-section {
+main section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -13,51 +10,56 @@ section {
 }
 
 p {
-    text-align: justify;
+    line-height: 150%;
+}
+
+.bold {
+  font-weight: bold;
+}
+.small {
+  font-size: 0.8em;
+}
+.italic {
+  font-style: italic;
 }
 
 .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DDD;
-    margin-bottom: 25px;
+    background-color: #62747e;
+    color: #FFF;
+
     > nav a {
-      margin-left: 25px;
+      margin-left: 10px;
+      color: #DDD;
+      font-size: 1.2em;
+      
+
+      &:link {}
+      &:visited {}
+      &:hover {
+        color: #FFF;
+        font-weight: bold;
+        text-decoration-line: none;
+        font-size: 1.4em;
+      }
     }
+
 
     > h1 {
       margin-right: 75px;
+
     }
 }
 
-.info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 15px;
-    max-width: 20%;
-}
-
-.img-head {
-    border: solid 1pt;
-    width: auto;
-    height: 250px;
-}
-
-.btn {
-    min-width: 100px;
-    max-width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.promote {
+.featured {
     display: flex;
     align-items: center;
     opacity: 0;
+    background-color: #dfe3e5;
+    padding-bottom: 20px;
+    padding-top: 20px;
 
     > div {
       margin-right: 15px;
@@ -71,6 +73,25 @@ p {
     }
 }
 
+.featured-button {
+    min-width: 90px;
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fc4945;
+    color: #FFF;
+    border-radius: 15px;
+    border-style: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding:5px;
+
+    > img {
+      margin-right: 5px;
+      filter: invert(100%);
+    }
+}
 
 .modal {
     position: fixed;
@@ -84,6 +105,7 @@ p {
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
+
 .modal-content {
     position: absolute;
     top: 50%;
@@ -91,20 +113,42 @@ p {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 24rem;
+    width: 40rem;
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dfe3e5;
+
+    > div {
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+
+      > div {
+        margin-right: 15px;
+      }
+
+      > img {
+        width: auto;
+        height: 250px;
+      }
+    }
 }
+
 .close-button {
-    float: right;
+    position: absolute;
+    right: 0;
     width: 1.5rem;
+    margin-right: 15px;
     line-height: 1.5rem;
     text-align: center;
     cursor: pointer;
     border-radius: 0.25rem;
-    background-color: lightgray;
+    background-color: #e06666;
 }
 .close-button:hover {
-    background-color: darkgray;
+    background-color: #f44336;
 }
 .show-modal {
     opacity: 1;
@@ -125,17 +169,22 @@ $carousel-width: calc((100px*4) + 10px);
 
 .carousel {
   opacity: 0;
+  align-items: center;
 
   > h2 {
     width: 100%;
     text-align: center;
   }
   
+  > img {
+    height: 60px;
+    cursor: pointer;
+  }
+
   &__view {
     width: $carousel-width;
     height: $carousel-height;
     background: white;
-    //border: solid 1px red;
     box-shadow: 0 1px 8px #888888;
     margin: 5px;
     overflow: hidden;
@@ -153,6 +202,7 @@ $carousel-width: calc((100px*4) + 10px);
 
 .product {
   width: 100px;
-    height: $carousel-height;
-    display: inline-block;
+  height: $carousel-height;
+  display: inline-block;
+  cursor: pointer;
 }
