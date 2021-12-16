@@ -1,3 +1,5 @@
+// General property
+
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
@@ -93,6 +95,9 @@ p {
     }
 }
 
+
+// Modal property
+
 .modal {
     position: fixed;
     left: 0;
@@ -158,6 +163,7 @@ p {
 }
 
 
+// Carousel property
 
 $carousel-height: 150px;
 $carousel-preview-width: 70;
