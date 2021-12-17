@@ -85,8 +85,7 @@ async function updateModal(url) {
     let modalImage = modalContent.getElementsByTagName('img')[0];
 
     if (url !== null) {
-        url = url.replaceAll(" ", '%20');
-        url = url.replaceAll("'", '%27');
+        url = encodeURI(url)
         let search = await retrieveContent(url);
         let movie = await retrieveContent(search.results[0].url);
 
