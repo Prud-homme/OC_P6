@@ -80,9 +80,9 @@ updateContent()
 
 async function updateModal(url) {
     let modalContent = document.querySelector(".modal-content");
-    let modalImage = modalContent.getElementsByTagName('img')[0];
     let modalTitle = modalContent.getElementsByTagName('h2')[0];
     let modalDesc = modalContent.getElementsByTagName('p')[0];
+    let modalImage = modalContent.getElementsByTagName('img')[0];
 
     if (url !== null) {
         url = url.replaceAll(" ", '%20');
@@ -174,7 +174,7 @@ function carouselize(carousel) {
   //Count all the products
   [].forEach.call(products, function(product) {
     productAmount++;
-    productListWidth += 250;
+    productListWidth += 125;
     productList.style.width = productListWidth+"px";
   });
 

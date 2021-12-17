@@ -25,6 +25,11 @@ p {
   font-style: italic;
 }
 
+.logo {
+    height: 40px;
+    width: auto;
+}
+
 .header {
     display: flex;
     justify-content: center;
@@ -51,7 +56,7 @@ p {
 
     > h1 {
       margin-right: 75px;
-
+      margin-left: 15px;
     }
 }
 
